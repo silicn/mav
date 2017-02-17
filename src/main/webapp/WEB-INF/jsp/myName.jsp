@@ -8,7 +8,14 @@
 
 
 
+
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
+
+
 <html>
 <head>
 
@@ -16,9 +23,17 @@
 </head>
 <body>
 
+
 <h1 style="text-align: center; font-size: 25px; display: block" >
 
     ${nihao}
+
+    <%--<c:forEach items="${shi}" var="node">--%>
+                 <%--姓名：<c:out value="${node.key}"></c:out>--%>
+                 <%--住址：<c:out value="${node.value}"></c:out>--%>
+                 <%--<br/>--%>
+    <%--</c:forEach>--%>
+
 
     标题不知写什么
 </h1>

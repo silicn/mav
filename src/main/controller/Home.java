@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by JiaHao on 2017/2/14.
@@ -43,10 +45,16 @@ public class Home {
 
 
 
-    @RequestMapping(value="/userself",method=RequestMethod.GET)
+    @RequestMapping(value="/userself")
     public ModelAndView index(){
+        Map<String, String> map = new HashMap<String, String>();
+
+//        map.put("name","silicn");
+//        map.put("nihao","nihao");
+
         ModelAndView modelAndView = new ModelAndView("/myName");
-      //  modelAndView.addObject("name", "shiguanghui");
+        modelAndView.addObject("name", "Silicn");
+        modelAndView.addObject("nihao","Hello：");
         return modelAndView;
     }
 
@@ -54,9 +62,9 @@ public class Home {
     @RequestMapping(value = "/hehe",method = RequestMethod.GET)
 
     public  String hehe(ModelMap map){
-        map.addAttribute("name","shiguanghui");
+        map.addAttribute("name","silicn");
         map.put("nihao","shi");
-        return "myName";
+        return "shiguanghui";
     }
 
 
